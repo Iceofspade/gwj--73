@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=3 uid="uid://b55kme0hh5rkf"]
+
+[ext_resource type="Script" path="res://scenes/player/squireely_player.gd" id="1_krpre"]
+[ext_resource type="Script" path="res://scenes/player/slow_motion_controller.gd" id="2_ran7m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rrojx"]
+size = Vector2(32, 32)
+
+[node name="Squireely player" type="CharacterBody2D"]
+script = ExtResource("1_krpre")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_rrojx")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.851968, 0.470541, 0.219523, 1)
+polygon = PackedVector2Array(8, -8, 0, -15, -8, -8, -16, 0, -8, 8, -8, 16, 0, 10, 8, 16, 8, 8, 16, 0)
+
+[node name="Polygon2D2" type="Polygon2D" parent="."]
+position = Vector2(-15, -3)
+color = Color(0.92549, 0.54902, 0.313726, 1)
+polygon = PackedVector2Array(24, -16, 16, -24, 8, -16, 9, -6, 15, -9, 22, -6)
+
+[node name="Polygon2D3" type="Polygon2D" parent="Polygon2D2"]
+position = Vector2(-7, 0)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(20, -16, 17, -17, 17, -14, 21, -14)
+
+[node name="Polygon2D4" type="Polygon2D" parent="Polygon2D2"]
+position = Vector2(38, 0)
+rotation = 3.14159
+scale = Vector2(1, -1)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(20, -16, 17, -17, 17, -14, 21, -14)
+metadata/_edit_group_ = true
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(0, -11)
+target_position = Vector2(1500, 0)
+collision_mask = 0
+
+[node name="gun" type="Node2D" parent="RayCast2D"]
+rotation = -1.5708
+
+[node name="Polygon2D8" type="Polygon2D" parent="RayCast2D/gun"]
+position = Vector2(-18, 19)
+color = Color(0.277528, 0.277528, 0.277528, 1)
+polygon = PackedVector2Array(20, -17, 16, -17, 15, -14, 16, 6, 18, 7, 20, 6, 21, -14)
+metadata/_edit_group_ = true
+
+[node name="Polygon2D7" type="Polygon2D" parent="RayCast2D/gun"]
+position = Vector2(-19, 17)
+color = Color(0.501961, 0.313726, 0, 1)
+polygon = PackedVector2Array(22, -16, 19, -17, 16, -16, 15, -14, 16, -12, 19, -11, 22, -12, 23, -14)
+metadata/_edit_group_ = true
+
+[node name="Polygon2D5" type="Polygon2D" parent="RayCast2D/gun"]
+position = Vector2(-18, 19)
+color = Color(0.556953, 0.556953, 0.556953, 1)
+polygon = PackedVector2Array(18, -17, 16, -17, 15, -14, 16, 6, 18, 5)
+metadata/_edit_group_ = true
+
+[node name="Polygon2D6" type="Polygon2D" parent="RayCast2D/gun"]
+position = Vector2(18, 19)
+scale = Vector2(-1, 1)
+color = Color(0.674815, 0.674815, 0.674815, 1)
+polygon = PackedVector2Array(18, -17, 16, -17, 15, -14, 16, 6, 18, 5)
+metadata/_edit_group_ = true
+
+[node name="slow motion controler" type="Node2D" parent="."]
+script = ExtResource("2_ran7m")
