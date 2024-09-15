@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://owiyqmhyaqtj"]
 
-[ext_resource type="Script" path="res://main_menu.gd" id="1_wkjma"]
-[ext_resource type="FontFile" uid="uid://b57ym66rlibo8" path="res://assets/fonts/Copyduck.ttf" id="2_4xhgj"]
-[ext_resource type="FontFile" uid="uid://dgkb3j01keed0" path="res://assets/fonts/Coffee Soda.ttf" id="3_fe2jk"]
+[ext_resource type="Script" path="res://main_menu.gd" id="1_ugb5m"]
+[ext_resource type="FontFile" uid="uid://b57ym66rlibo8" path="res://assets/fonts/Copyduck.ttf" id="2_27plf"]
+[ext_resource type="FontFile" uid="uid://dgkb3j01keed0" path="res://assets/fonts/Coffee Soda.ttf" id="3_6r4au"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fbt06"]
 
@@ -42,7 +42,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_wkjma")
+script = ExtResource("1_ugb5m")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -75,7 +75,7 @@ theme_override_colors/font_disabled_color = Color(0.133196, 0.133196, 0.133196, 
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_4xhgj")
+theme_override_fonts/font = ExtResource("2_27plf")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxEmpty_xpkpd")
 theme_override_styles/hover = SubResource("StyleBoxFlat_rbqmc")
@@ -91,7 +91,7 @@ theme_override_colors/font_disabled_color = Color(0.133196, 0.133196, 0.133196, 
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_4xhgj")
+theme_override_fonts/font = ExtResource("2_27plf")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxEmpty_xpkpd")
 theme_override_styles/hover = SubResource("StyleBoxFlat_rbqmc")
@@ -106,7 +106,7 @@ theme_override_colors/font_disabled_color = Color(0.133196, 0.133196, 0.133196, 
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_4xhgj")
+theme_override_fonts/font = ExtResource("2_27plf")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxEmpty_xpkpd")
 theme_override_styles/hover = SubResource("StyleBoxFlat_rbqmc")
@@ -145,7 +145,7 @@ grow_vertical = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_y = 10
-theme_override_fonts/font = ExtResource("3_fe2jk")
+theme_override_fonts/font = ExtResource("3_6r4au")
 theme_override_font_sizes/font_size = 50
 text = "Project Tower"
 horizontal_alignment = 1
