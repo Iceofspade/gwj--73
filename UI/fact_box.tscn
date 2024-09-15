@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://chx7gjg0mb6un"]
+
+[node name="FactBox" type="MarginContainer"]

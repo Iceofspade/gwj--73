@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://cx18xdgcpqntc"]
+
+[ext_resource type="Texture2D" uid="uid://dxg0laau548n8" path="res://scenes/collectibles/acorn/Acorn.png" id="1_b8yuf"]
+[ext_resource type="Script" path="res://scenes/collectibles/acorn_amount_hud.gd" id="1_qlr5j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6oosg"]
+
+[node name="AcornAmountHud" type="PanelContainer" node_paths=PackedStringArray("_amount_label")]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -14.0
+offset_top = -123.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_6oosg")
+script = ExtResource("1_qlr5j")
+_amount_label = NodePath("MarginContainer/HBoxContainer/Label")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("1_b8yuf")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "0"
+horizontal_alignment = 1
