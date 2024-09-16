@@ -23,6 +23,7 @@ CollectiblesController="*res://global scripts/collectibles_controller/collectibl
 
 window/size/viewport_width=1280
 window/size/viewport_height=750
+window/size/mode=2
 window/stretch/mode="canvas_items"
 
 [input]

@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scenes/collectibles/acorn/acorn.gd" id="1_ie0m0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0yrn2"]
-size = Vector2(20, 30)
+size = Vector2(40, 60)
 
 [node name="Acorn" type="Area2D" groups=["acorns"]]
 collision_layer = 4
@@ -13,6 +13,7 @@ script = ExtResource("1_ie0m0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
+scale = Vector2(2, 2)
 texture = ExtResource("1_ft8k4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

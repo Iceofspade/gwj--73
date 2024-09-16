@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://dlsle2vdui60s"]
+[gd_scene load_steps=8 format=4 uid="uid://dlsle2vdui60s"]
 
 [ext_resource type="PackedScene" uid="uid://b55kme0hh5rkf" path="res://scenes/player/squireely_player.tscn" id="1_r5wig"]
 [ext_resource type="Script" path="res://scenes/follow_cam.gd" id="2_isc7h"]
 [ext_resource type="PackedScene" uid="uid://dxjj7yinokw1d" path="res://scenes/collectibles/acorn/acorn.tscn" id="3_306wh"]
 [ext_resource type="PackedScene" uid="uid://cx18xdgcpqntc" path="res://scenes/collectibles/acorn_amount_hud.tscn" id="4_27uf0"]
 [ext_resource type="PackedScene" uid="uid://dqv2wabnsugds" path="res://scenes/enemy/enemy.tscn" id="5_3taq0"]
+[ext_resource type="TileSet" uid="uid://cljel4i11f2gs" path="res://scenes/tileset.tres" id="6_7uebv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s12wl"]
 size = Vector2(1149, 35)
@@ -12,9 +13,10 @@ size = Vector2(1149, 35)
 [node name="main" type="Node2D"]
 
 [node name="Squireely player" parent="." instance=ExtResource("1_r5wig")]
-position = Vector2(607, 596)
+position = Vector2(499, -154)
 
 [node name="walls" type="Node2D" parent="."]
+position = Vector2(4827, 40)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="walls"]
 position = Vector2(1, 602)
@@ -282,15 +284,6 @@ zoom = Vector2(1.08, 0.9)
 script = ExtResource("2_isc7h")
 player = NodePath("../Squireely player")
 
-[node name="Acorn" parent="." instance=ExtResource("3_306wh")]
-position = Vector2(953, 88)
-
-[node name="Enemy" parent="." instance=ExtResource("5_3taq0")]
-position = Vector2(233, 480)
-
-[node name="Enemy2" parent="." instance=ExtResource("5_3taq0")]
-position = Vector2(993, 223)
-
 [node name="HUDCanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="AcornAmountHud" parent="HUDCanvasLayer" instance=ExtResource("4_27uf0")]
@@ -305,3 +298,61 @@ offset_right = 116.0
 offset_bottom = 123.0
 grow_horizontal = 1
 grow_vertical = 1
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAABAAoAAAAAAAAAAAACAAoAAAAAAAAAAAADAAoAAAAAAAAAAAAEAAoAAAAAAAAAAAAFAAoAAAAAAAAAAAAGAAoAAAAAAAAAAAAHAAoAAAAAAAAAAAAIAAoAAAAAAAAAAAAJAAoAAAAAAAAAAAAKAAoAAAAAAAAAAAALAAoAAAAAAAAAAAAMAAoAAAAAAAAAAAANAAoAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAUAAAAAAAAAAAANAAkAAAAAAAAAAAANAAgAAAAAAAAAAAANAAcAAAAAAAAAAAANAAYAAAAAAAAAAAANAAUAAAAAAAAAAAANAAQAAAAAAAAAAAANAAMAAAAAAAAAAAANAAIAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAMAAAAAAAAAAAANAAEAAAAAAAAAAAANAAAAAAAAAAAAAAAOAAAAAAAAAAAAAAAPAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAARAAAAAAAAAAAAAAASAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAP7/AAAAAAAAAAAAAP3/AAAAAAAAAAAAAPz/AAAAAAAAAAAAAPv/AAAAAAAAAAAAAPr/AAAAAAAAAAAAAPn/AAAAAAAAAAAAAPj/AAAAAAAAAAAAAPL/AAAAAAAAAAAAAPP/AAAAAAAAAAAAAPT/AAAAAAAAAAAAAPX/AAAAAAAAAAAAAPb/AAAAAAAAAAAAAPf/AAAAAAAAAAATAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAVAAAAAAAAAAAAAAAWAAAAAAAAAAAAAAAXAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAZAAAAAAAAAAAAAAAaAAAAAAAAAAAAAAAbAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAdAAAAAAAAAAAAAAAeAAAAAAAAAAAAAAAfAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAhAAAAAAAAAAAAAAAhAP//AAAAAAAAAAAhAP7/AAAAAAAAAAAhAP3/AAAAAAAAAAAhAPz/AAAAAAAAAAAhAPv/AAAAAAAAAAAhAPr/AAAAAAAAAAAhAPn/AAAAAAAAAAAhAPj/AAAAAAAAAAAhAPf/AAAAAAAAAAAhAPb/AAAAAAAAAAAhAPX/AAAAAAAAAAAhAPT/AAAAAAAAAAAiAPT/AAAAAAAAAAAjAPT/AAAAAAAAAAAkAPT/AAAAAAAAAAAlAPT/AAAAAAAAAAAmAPT/AAAAAAAAAAAnAPT/AAAAAAAAAAApAPT/AAAAAAAAAAAqAPT/AAAAAAAAAAAoAPT/AAAAAAAAAAA=")
+tile_set = ExtResource("6_7uebv")
+
+[node name="Acorn" parent="." instance=ExtResource("3_306wh")]
+position = Vector2(630, 318)
+
+[node name="Acorn2" parent="." instance=ExtResource("3_306wh")]
+position = Vector2(1090, -552)
+
+[node name="Enemy" parent="." instance=ExtResource("5_3taq0")]
+position = Vector2(133, 588)
+
+[node name="Enemy2" parent="." instance=ExtResource("5_3taq0")]
+position = Vector2(211, 588)
+
+[node name="Enemy3" parent="." instance=ExtResource("5_3taq0")]
+position = Vector2(314, 587)
+
+[node name="Enemy4" parent="." instance=ExtResource("5_3taq0")]
+position = Vector2(415, 587)
+
+[node name="Enemy5" parent="." instance=ExtResource("5_3taq0")]
+position = Vector2(514, 587)
+
+[node name="Enemy6" parent="." instance=ExtResource("5_3taq0")]
+position = Vector2(618, 587)
+
+[node name="Enemy7" parent="." instance=ExtResource("5_3taq0")]
+position = Vector2(711, 587)
+
+[node name="Enemy8" parent="." instance=ExtResource("5_3taq0")]
+position = Vector2(797, 587)
+
+[node name="Enemy9" parent="." instance=ExtResource("5_3taq0")]
+position = Vector2(122, 280)
+
+[node name="Enemy10" parent="." instance=ExtResource("5_3taq0")]
+position = Vector2(777, 116)
+
+[node name="Enemy11" parent="." instance=ExtResource("5_3taq0")]
+position = Vector2(120, -207)
+
+[node name="Enemy12" parent="." instance=ExtResource("5_3taq0")]
+position = Vector2(1092, -68)
+
+[node name="Enemy13" parent="." instance=ExtResource("5_3taq0")]
+position = Vector2(1623, -70)
+
+[node name="Enemy14" parent="." instance=ExtResource("5_3taq0")]
+position = Vector2(1932, -352)
+
+[node name="Enemy15" parent="." instance=ExtResource("5_3taq0")]
+position = Vector2(1553, -575)
+
+[node name="Enemy16" parent="." instance=ExtResource("5_3taq0")]
+position = Vector2(1920, -801)

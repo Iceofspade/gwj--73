@@ -1,7 +1,5 @@
 extends Area2D
 
-signal died;
-
 
 func _ready() -> void:
 	body_entered.connect(_on_body_entered);
