@@ -33,16 +33,11 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, decceleration * delta)
 		#velocity.x = clamp(velocity.x, -decceleration, decceleration)
 		
-	if Input.is_action_just_pressed("shoot") and CollectiblesController.acorn_amount > 0:
-		#slowmo_controler.switch_slowmo_state()
-		Engine.time_scale = 0.1
-		
 	if Input.is_action_just_released("shoot") and CollectiblesController.acorn_amount > 0:
 		var trajectory = -(max_knockback * ((mouse_angle * 2).round()/2))
 		velocity = trajectory
 		velocity.x = clamp(velocity.x, -knockback_h ,knockback_h )
 		velocity.y = clamp(velocity.y, -knockback_v ,knockback_v )
-		Engine.time_scale = 1
 
 	move_and_slide()
 
