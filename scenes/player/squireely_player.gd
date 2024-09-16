@@ -17,7 +17,7 @@ var decceleration:= 1500
 var ammo_count:= 0
 
 func _physics_process(delta: float) -> void:
-	Engine.time_scale = 1
+	#Engine.time_scale = 1
 	ray.look_at(get_global_mouse_position())
 	
 	# Apply Gravity
@@ -43,7 +43,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = clamp(velocity.x, -knockback_h ,knockback_h )
 		velocity.y = clamp(velocity.y, -knockback_v ,knockback_v )
 		Engine.time_scale = 1
-		
+
 	move_and_slide()
 
 

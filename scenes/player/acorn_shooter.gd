@@ -23,7 +23,8 @@ func _input(event: InputEvent) -> void:
 
 
 func _start_charging_shot() -> void:
-	_charge_timer.start();
+	#_charge_timer.start();
+	pass
 
 
 
