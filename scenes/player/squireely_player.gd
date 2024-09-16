@@ -16,8 +16,16 @@ var decceleration:= 1500
 #var max_deccerleration = 500
 var ammo_count:= 0
 
+
+
+func _ready() -> void:
+	knockback_v = 750;
+	knockback_h = 900;
+
+
+
+
 func _physics_process(delta: float) -> void:
-	#Engine.time_scale = 1
 	ray.look_at(get_global_mouse_position())
 	
 	# Apply Gravity
@@ -35,11 +43,20 @@ func _physics_process(delta: float) -> void:
 		
 	if Input.is_action_just_released("shoot") and CollectiblesController.acorn_amount > 0:
 		var trajectory = -(max_knockback * ((mouse_angle * 2).round()/2))
-		velocity = trajectory
+		velocity = trajectory;
 		velocity.x = clamp(velocity.x, -knockback_h ,knockback_h )
 		velocity.y = clamp(velocity.y, -knockback_v ,knockback_v )
 
 	move_and_slide()
+
+
+
+
+func shot_recoil(__force_multiplier: float) -> void:
+	knockback_h = 900 * __force_multiplier;
+	knockback_v = 750 * __force_multiplier;
+	print(knockback_h)
+	print(knockback_v)
 
 
 

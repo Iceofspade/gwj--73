@@ -73,10 +73,31 @@ metadata/_edit_group_ = true
 [node name="slow motion controler" type="Node2D" parent="."]
 script = ExtResource("2_ran7m")
 
-[node name="AcornShooter" type="Node2D" parent="."]
+[node name="AcornShooter" type="Node2D" parent="." node_paths=PackedStringArray("_charge_timer", "_charge_progress_bar", "_avatar")]
 script = ExtResource("3_kx4xu")
+_charge_timer = NodePath("ChargeTimer")
+_charge_progress_bar = NodePath("CanvasLayer/MarginContainer/ChargeProgressBar")
+_avatar = NodePath("..")
 _projectile_acorn_scene = ExtResource("4_qh8ma")
 
 [node name="ChargeTimer" type="Timer" parent="AcornShooter"]
-wait_time = 0.5
 one_shot = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="AcornShooter"]
+
+[node name="MarginContainer" type="MarginContainer" parent="AcornShooter/CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -50.0
+offset_bottom = 100.0
+grow_horizontal = 0
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+
+[node name="ChargeProgressBar" type="ProgressBar" parent="AcornShooter/CanvasLayer/MarginContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+max_value = 1.0
+fill_mode = 3
+show_percentage = false
