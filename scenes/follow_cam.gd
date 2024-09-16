@@ -5,4 +5,4 @@ extends Camera2D
 
 func _process(_delta: float) -> void:
 	if is_instance_valid(player):
-		position = player.position;
+		position.y = player.position.y;

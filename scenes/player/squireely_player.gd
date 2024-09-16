@@ -9,7 +9,7 @@ var speed:= 500
 
 var max_knockback:= 1000000
 var knockback_v = 750
-var knockback_h = 900
+var knockback_h = 750
 
 var gravity_stregnth:= 1500
 var decceleration:= 1500
@@ -20,7 +20,7 @@ var ammo_count:= 0
 
 func _ready() -> void:
 	knockback_v = 750;
-	knockback_h = 900;
+	knockback_h = 750;
 
 
 
@@ -53,10 +53,8 @@ func _physics_process(delta: float) -> void:
 
 
 func shot_recoil(__force_multiplier: float) -> void:
-	knockback_h = 900 * __force_multiplier;
+	knockback_h = 750 * __force_multiplier;
 	knockback_v = 750 * __force_multiplier;
-	print(knockback_h)
-	print(knockback_v)
 
 
 
