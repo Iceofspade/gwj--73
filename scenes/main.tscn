@@ -1,7 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dlsle2vdui60s"]
+[gd_scene load_steps=7 format=3 uid="uid://dlsle2vdui60s"]
 
 [ext_resource type="PackedScene" uid="uid://b55kme0hh5rkf" path="res://scenes/player/squireely_player.tscn" id="1_r5wig"]
 [ext_resource type="Script" path="res://scenes/follow_cam.gd" id="2_isc7h"]
+[ext_resource type="PackedScene" uid="uid://dxjj7yinokw1d" path="res://scenes/collectibles/acorn/acorn.tscn" id="3_306wh"]
+[ext_resource type="PackedScene" uid="uid://cx18xdgcpqntc" path="res://scenes/collectibles/acorn_amount_hud.tscn" id="4_27uf0"]
+[ext_resource type="PackedScene" uid="uid://dqv2wabnsugds" path="res://scenes/enemy/enemy.tscn" id="5_3taq0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s12wl"]
 size = Vector2(1149, 35)
@@ -278,3 +281,27 @@ position = Vector2(606, 587)
 zoom = Vector2(1.08, 0.9)
 script = ExtResource("2_isc7h")
 player = NodePath("../Squireely player")
+
+[node name="Acorn" parent="." instance=ExtResource("3_306wh")]
+position = Vector2(953, 88)
+
+[node name="Enemy" parent="." instance=ExtResource("5_3taq0")]
+position = Vector2(233, 480)
+
+[node name="Enemy2" parent="." instance=ExtResource("5_3taq0")]
+position = Vector2(993, 223)
+
+[node name="HUDCanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="AcornAmountHud" parent="HUDCanvasLayer" instance=ExtResource("4_27uf0")]
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 116.0
+offset_bottom = 123.0
+grow_horizontal = 1
+grow_vertical = 1

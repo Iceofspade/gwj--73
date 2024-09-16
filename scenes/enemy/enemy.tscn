@@ -1,0 +1,85 @@
+[gd_scene load_steps=13 format=3 uid="uid://dqv2wabnsugds"]
+
+[ext_resource type="Script" path="res://scenes/enemy/enemy.gd" id="1_rcrto"]
+[ext_resource type="Texture2D" uid="uid://26dwaqqtj88w" path="res://scenes/enemy/placeholder_enemy_cc0.png" id="1_te1bk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8ket"]
+atlas = ExtResource("1_te1bk")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ib37l"]
+atlas = ExtResource("1_te1bk")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j1ma5"]
+atlas = ExtResource("1_te1bk")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hqtnn"]
+atlas = ExtResource("1_te1bk")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j1cic"]
+atlas = ExtResource("1_te1bk")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p7as2"]
+atlas = ExtResource("1_te1bk")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ku7xk"]
+atlas = ExtResource("1_te1bk")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aedl1"]
+atlas = ExtResource("1_te1bk")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lm8ak"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h8ket")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ib37l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j1ma5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hqtnn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j1cic")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p7as2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ku7xk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aedl1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1trcm"]
+radius = 19.105
+
+[node name="Enemy" type="Area2D"]
+collision_layer = 8
+collision_mask = 18
+script = ExtResource("1_rcrto")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_lm8ak")
+frame = 7
+frame_progress = 0.166503
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_1trcm")

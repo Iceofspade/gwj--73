@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+class_name Avatar;
+
 @onready var slowmo_controler = $"slow motion controler"
 @onready var ray = $RayCast2D
 var speed:= 500
@@ -42,3 +44,9 @@ func _physics_process(delta: float) -> void:
 		Engine.time_scale = 1
 		
 	move_and_slide()
+
+
+
+
+func die() -> void:
+	get_tree().reload_current_scene();

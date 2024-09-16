@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cl3ykdjo4jpgr"]
+
+[ext_resource type="Script" path="res://scenes/projectile_acorn/projectile_acorn.gd" id="1_32r5x"]
+[ext_resource type="Texture2D" uid="uid://dxg0laau548n8" path="res://scenes/collectibles/acorn/Acorn.png" id="2_au6n8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jhwgt"]
+size = Vector2(18, 28)
+
+[node name="ProjectileAcorn" type="Area2D"]
+collision_layer = 16
+collision_mask = 9
+script = ExtResource("1_32r5x")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_au6n8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_jhwgt")

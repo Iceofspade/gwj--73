@@ -3,7 +3,10 @@ extends Node
 signal acorn_amount_changed(new_amount: int);
 
 
-var _acorns_collected: int = 0;
+var acorn_amount: int = 5:
+	set(value):
+		acorn_amount = value;
+		acorn_amount_changed.emit(acorn_amount);
 
 
 
@@ -16,5 +19,4 @@ func _ready() -> void:
 
 
 func _on_acorn_collected() -> void:
-	_acorns_collected += 1;
-	acorn_amount_changed.emit(_acorns_collected);
+	acorn_amount += 1;
