@@ -76,3 +76,7 @@ script = ExtResource("2_ran7m")
 [node name="AcornShooter" type="Node2D" parent="."]
 script = ExtResource("3_kx4xu")
 _projectile_acorn_scene = ExtResource("4_qh8ma")
+
+[node name="ChargeTimer" type="Timer" parent="AcornShooter"]
+wait_time = 0.5
+one_shot = true

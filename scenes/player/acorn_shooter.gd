@@ -1,8 +1,9 @@
 extends Node2D
 
+@export_group("Nodes Accessed in Script")
+@export var _charge_timer: Timer;
 @export_group("Resources Accessed in Script")
 @export var _projectile_acorn_scene: PackedScene;
-
 
 
 func _ready() -> void:
@@ -22,7 +23,7 @@ func _input(event: InputEvent) -> void:
 
 
 func _start_charging_shot() -> void:
-	pass
+	_charge_timer.start();
 
 
 
