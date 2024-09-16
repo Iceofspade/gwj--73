@@ -53,6 +53,7 @@ func _physics_process(delta: float) -> void:
 
 
 func shot_recoil(__force_multiplier: float) -> void:
+	velocity.y = 0;
 	knockback_h = 750 * __force_multiplier;
 	knockback_v = 750 * __force_multiplier;
 

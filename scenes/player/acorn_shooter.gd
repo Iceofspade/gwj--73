@@ -74,4 +74,4 @@ func _shoot() -> void:
 	__projectile.direction = (get_local_mouse_position() - position).normalized();
 	__projectile.speed = 200 * __force_multiplier;
 	get_parent().get_parent().add_child(__projectile);
-	_avatar.shot_recoil(__force_multiplier / 2.0);
+	_avatar.shot_recoil(maxf(1, __force_multiplier / 2.0));
