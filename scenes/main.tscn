@@ -1,16 +1,19 @@
-[gd_scene load_steps=8 format=4 uid="uid://dlsle2vdui60s"]
+[gd_scene load_steps=10 format=4 uid="uid://dlsle2vdui60s"]
 
 [ext_resource type="PackedScene" uid="uid://b55kme0hh5rkf" path="res://scenes/player/squireely_player.tscn" id="1_r5wig"]
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_wywkf"]
 [ext_resource type="Script" path="res://scenes/follow_cam.gd" id="2_isc7h"]
 [ext_resource type="PackedScene" uid="uid://dxjj7yinokw1d" path="res://scenes/collectibles/acorn/acorn.tscn" id="3_306wh"]
 [ext_resource type="PackedScene" uid="uid://cx18xdgcpqntc" path="res://scenes/collectibles/acorn_amount_hud.tscn" id="4_27uf0"]
 [ext_resource type="PackedScene" uid="uid://dqv2wabnsugds" path="res://scenes/enemy/enemy.tscn" id="5_3taq0"]
 [ext_resource type="TileSet" uid="uid://cljel4i11f2gs" path="res://scenes/tileset.tres" id="6_7uebv"]
+[ext_resource type="PackedScene" uid="uid://bw646208otp6p" path="res://UI/pause_menu.tscn" id="7_3724x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s12wl"]
 size = Vector2(1149, 35)
 
 [node name="main" type="Node2D"]
+script = ExtResource("1_wywkf")
 
 [node name="Squireely player" parent="." instance=ExtResource("1_r5wig")]
 position = Vector2(499, -154)
@@ -299,6 +302,20 @@ offset_bottom = 123.0
 grow_horizontal = 1
 grow_vertical = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="PauseMenu" parent="HUDCanvasLayer" instance=ExtResource("7_3724x")]
+process_mode = 2
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -640.0
+offset_top = -375.0
+offset_right = -640.0
+offset_bottom = -375.0
+scale = Vector2(3.88626, 2.05946)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAABAAoAAAAAAAAAAAACAAoAAAAAAAAAAAADAAoAAAAAAAAAAAAEAAoAAAAAAAAAAAAFAAoAAAAAAAAAAAAGAAoAAAAAAAAAAAAHAAoAAAAAAAAAAAAIAAoAAAAAAAAAAAAJAAoAAAAAAAAAAAAKAAoAAAAAAAAAAAALAAoAAAAAAAAAAAAMAAoAAAAAAAAAAAANAAoAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAUAAAAAAAAAAAANAAkAAAAAAAAAAAANAAgAAAAAAAAAAAANAAcAAAAAAAAAAAANAAYAAAAAAAAAAAANAAUAAAAAAAAAAAANAAQAAAAAAAAAAAANAAMAAAAAAAAAAAANAAIAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAMAAAAAAAAAAAANAAEAAAAAAAAAAAANAAAAAAAAAAAAAAAOAAAAAAAAAAAAAAAPAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAARAAAAAAAAAAAAAAASAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAP7/AAAAAAAAAAAAAP3/AAAAAAAAAAAAAPz/AAAAAAAAAAAAAPv/AAAAAAAAAAAAAPr/AAAAAAAAAAAAAPn/AAAAAAAAAAAAAPj/AAAAAAAAAAAAAPL/AAAAAAAAAAAAAPP/AAAAAAAAAAAAAPT/AAAAAAAAAAAAAPX/AAAAAAAAAAAAAPb/AAAAAAAAAAAAAPf/AAAAAAAAAAATAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAVAAAAAAAAAAAAAAAWAAAAAAAAAAAAAAAXAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAZAAAAAAAAAAAAAAAaAAAAAAAAAAAAAAAbAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAdAAAAAAAAAAAAAAAeAAAAAAAAAAAAAAAfAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAhAAAAAAAAAAAAAAAhAP//AAAAAAAAAAAhAP7/AAAAAAAAAAAhAP3/AAAAAAAAAAAhAPz/AAAAAAAAAAAhAPv/AAAAAAAAAAAhAPr/AAAAAAAAAAAhAPn/AAAAAAAAAAAhAPj/AAAAAAAAAAAhAPf/AAAAAAAAAAAhAPb/AAAAAAAAAAAhAPX/AAAAAAAAAAAhAPT/AAAAAAAAAAAiAPT/AAAAAAAAAAAjAPT/AAAAAAAAAAAkAPT/AAAAAAAAAAAlAPT/AAAAAAAAAAAmAPT/AAAAAAAAAAAnAPT/AAAAAAAAAAApAPT/AAAAAAAAAAAqAPT/AAAAAAAAAAAoAPT/AAAAAAAAAAA=")
