@@ -1,3 +1,40 @@
-[gd_scene format=3 uid="uid://chx7gjg0mb6un"]
+[gd_scene load_steps=4 format=3 uid="uid://chx7gjg0mb6un"]
+
+[ext_resource type="Script" path="res://UI/fact_box.gd" id="1_8qxvo"]
+[ext_resource type="Texture2D" uid="uid://cmtl3knih1ys2" path="res://assets/textboxfiller.png" id="1_htjna"]
+[ext_resource type="FontFile" uid="uid://dgkb3j01keed0" path="res://assets/fonts/Coffee Soda.ttf" id="2_usiau"]
 
 [node name="FactBox" type="MarginContainer"]
+offset_top = -1.99988
+offset_right = 576.0
+offset_bottom = 608.0
+scale = Vector2(0.496097, 0.161238)
+script = ExtResource("1_8qxvo")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_htjna")
+patch_margin_left = 288
+patch_margin_top = 288
+patch_margin_right = 288
+patch_margin_bottom = 322
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_usiau")
+theme_override_font_sizes/font_size = 50
+text = "s"
+vertical_alignment = 1
+
+[node name="DisplayTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="DisplayTimer" to="." method="_on_display_timer_timeout"]
