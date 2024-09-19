@@ -8,4 +8,4 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
-	#self.text = str("Health: ") + str(get_parent().HP)
+	#self.text = str("Health: ") + str(get_parent().hp)
