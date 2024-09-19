@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 class_name Avatar;
+#var Health = 3 #newcode
 
 @onready var slowmo_controler = $"slow motion controler"
 @onready var ray = $RayCast2D
@@ -28,6 +29,14 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	ray.look_at(get_global_mouse_position())
 	
+	#health stuff
+	#if Input.is_action_just_pressed("ui_accept"):
+		#Health -= 1
+		#print(Health)
+		
+	#if Health <= 0:
+		#queue_free()
+	
 	# Apply Gravity
 	var mouse_angle = global_position.direction_to(get_global_mouse_position())
 	if not is_on_floor():
@@ -48,6 +57,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y = clamp(velocity.y, -knockback_v ,knockback_v )
 
 	move_and_slide()
+	
 
 
 
