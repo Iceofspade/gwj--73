@@ -325,8 +325,6 @@ offset_left = 27.0
 offset_top = 124.0
 offset_right = 67.0
 offset_bottom = 173.0
-text = "
-3/3"
 script = ExtResource("6_8km8m")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
