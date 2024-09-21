@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://owiyqmhyaqtj"]
+[gd_scene load_steps=10 format=3 uid="uid://owiyqmhyaqtj"]
 
 [ext_resource type="Script" path="res://main_menu.gd" id="1_ugb5m"]
 [ext_resource type="FontFile" uid="uid://b57ym66rlibo8" path="res://assets/fonts/Copyduck.ttf" id="2_27plf"]
 [ext_resource type="FontFile" uid="uid://dgkb3j01keed0" path="res://assets/fonts/Coffee Soda.ttf" id="3_6r4au"]
+[ext_resource type="AudioStream" path="res://assets/Audio/Music/Music-MainMenu(GoingNuts).ogg" id="4_uvkxm"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fbt06"]
 
@@ -159,6 +160,14 @@ offset_left = 24.0
 offset_top = 655.0
 offset_right = 1268.0
 offset_bottom = 745.0
+
+[node name="MainMenuMusic" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(641, 375.02)
+stream = ExtResource("4_uvkxm")
+volume_db = -16.0
+autoplay = true
+panning_strength = 0.0
+bus = &"Main Menu Bus"
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
