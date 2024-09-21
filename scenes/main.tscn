@@ -16,6 +16,23 @@ size = Vector2(1149, 35)
 [node name="main" type="Node2D"]
 script = ExtResource("1_wywkf")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("7_3724x")]
+process_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -164.0
+offset_top = -318.0
+offset_right = -164.0
+offset_bottom = -318.0
+scale = Vector2(3.88626, 2.05946)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
 [node name="Squireely player" parent="." instance=ExtResource("1_r5wig")]
 position = Vector2(499, -154)
 
@@ -303,22 +320,6 @@ offset_bottom = 123.0
 grow_horizontal = 1
 grow_vertical = 1
 metadata/_edit_use_anchors_ = true
-
-[node name="PauseMenu" parent="HUDCanvasLayer" instance=ExtResource("7_3724x")]
-process_mode = 2
-visible = false
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -164.0
-offset_top = -318.0
-offset_right = -164.0
-offset_bottom = -318.0
-scale = Vector2(3.88626, 2.05946)
-size_flags_horizontal = 4
-size_flags_vertical = 4
 
 [node name="HP" type="Label" parent="HUDCanvasLayer"]
 offset_left = 27.0
