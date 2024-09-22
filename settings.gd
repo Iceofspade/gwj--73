@@ -35,7 +35,7 @@ func _on_resolutions_item_selected(index: int) -> void:
 			
 
 func _on_full_screen_toggled(toggled_on: bool) -> void:
-	DisplayServer.WINDOW_MODE_FULLSCREEN
+	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	
 
 func _on_return_pressed() -> void:
