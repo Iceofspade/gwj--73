@@ -63,4 +63,5 @@ func shot_recoil(__force_multiplier: float) -> void:
 
 
 func die() -> void:
+	#get_tree().change_scene_to_file("res://scenes/main.tscn")
 	get_tree().reload_current_scene();
