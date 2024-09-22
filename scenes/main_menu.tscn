@@ -1,16 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://owiyqmhyaqtj"]
+[gd_scene load_steps=10 format=3 uid="uid://owiyqmhyaqtj"]
 
 [ext_resource type="Script" path="res://main_menu.gd" id="1_ugb5m"]
-[ext_resource type="FontFile" uid="uid://cc0a4p6qxu2mk" path="res://assets/fonts/If.ttf" id="2_3m51i"]
 [ext_resource type="FontFile" uid="uid://b57ym66rlibo8" path="res://assets/fonts/Copyduck.ttf" id="2_27plf"]
-<<<<<<< HEAD
-[ext_resource type="FontFile" uid="uid://c4ceb1ibsen43" path="res://assets/fonts/Funkrocker.otf" id="3_7bycs"]
-[ext_resource type="AudioStream" uid="uid://bors86jr8gj2l" path="res://assets/Audio/Music/Music-MainMenu(GoingNuts).ogg" id="4_uvkxm"]
-[ext_resource type="Texture2D" uid="uid://ctfu6sgfntd2d" path="res://assets/visual/Artwork/MainMenu.png" id="5_srim2"]
-=======
 [ext_resource type="FontFile" uid="uid://dgkb3j01keed0" path="res://assets/fonts/Coffee Soda.ttf" id="3_6r4au"]
 [ext_resource type="AudioStream" uid="uid://bors86jr8gj2l" path="res://assets/Audio/Music/Music-MainMenu(GoingNuts).ogg" id="4_uvkxm"]
->>>>>>> Health&ChangesPath
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fbt06"]
 
@@ -84,7 +77,7 @@ theme_override_colors/font_disabled_color = Color(0.133196, 0.133196, 0.133196, 
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_3m51i")
+theme_override_fonts/font = ExtResource("2_27plf")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxEmpty_xpkpd")
 theme_override_styles/hover = SubResource("StyleBoxFlat_rbqmc")
@@ -114,7 +107,7 @@ theme_override_colors/font_disabled_color = Color(0.133196, 0.133196, 0.133196, 
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_3m51i")
+theme_override_fonts/font = ExtResource("2_27plf")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxEmpty_xpkpd")
 theme_override_styles/hover = SubResource("StyleBoxFlat_rbqmc")
@@ -150,12 +143,12 @@ offset_right = 192.5
 offset_bottom = -131.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.965779, 0.933299, 0.897276, 1)
-theme_override_colors/font_shadow_color = Color(0.243225, 0.132536, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_y = 10
-theme_override_fonts/font = ExtResource("3_7bycs")
-theme_override_font_sizes/font_size = 120
-text = "Punk-Munk"
+theme_override_fonts/font = ExtResource("3_6r4au")
+theme_override_font_sizes/font_size = 50
+text = "Project Tower"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -174,12 +167,6 @@ volume_db = -16.0
 autoplay = true
 panning_strength = 0.0
 bus = &"Main Menu Bus"
-
-[node name="MainMenu" type="Sprite2D" parent="."]
-show_behind_parent = true
-position = Vector2(648.231, 375.404)
-scale = Vector2(0.704477, 0.704477)
-texture = ExtResource("5_srim2")
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
