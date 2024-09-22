@@ -30,7 +30,6 @@ func _on_restart_pressed():
 	#get_tree().reload_scene() <-Alpha
 	resume()
 	get_tree().reload_current_scene()
-	
 	pass
 
 
