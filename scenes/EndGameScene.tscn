@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvhckkifwrkxj"]
+
+[ext_resource type="Texture2D" uid="uid://gc8npt5ucrlt" path="res://assets/visual/Artwork/Splash.png" id="1_1xca6"]
+[ext_resource type="FontFile" uid="uid://c4ceb1ibsen43" path="res://assets/fonts/Funkrocker.otf" id="2_tby4e"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Splash" type="Sprite2D" parent="."]
+position = Vector2(629, 358.92)
+scale = Vector2(1.38672, 1.38672)
+texture = ExtResource("1_1xca6")
+
+[node name="Label" type="Label" parent="Splash"]
+offset_left = -165.859
+offset_top = -102.342
+offset_right = 172.141
+offset_bottom = -27.3422
+theme_override_colors/font_color = Color(0.825689, 0.704533, 0.592959, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_tby4e")
+theme_override_font_sizes/font_size = 50
+text = "Congratulations"
