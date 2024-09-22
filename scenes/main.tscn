@@ -1,17 +1,23 @@
-[gd_scene load_steps=11 format=4 uid="uid://dlsle2vdui60s"]
+[gd_scene load_steps=15 format=4 uid="uid://dlsle2vdui60s"]
 
 [ext_resource type="PackedScene" uid="uid://b55kme0hh5rkf" path="res://scenes/player/squireely_player.tscn" id="1_r5wig"]
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_wywkf"]
 [ext_resource type="Script" path="res://scenes/follow_cam.gd" id="2_isc7h"]
+[ext_resource type="AudioStream" uid="uid://ds61kldx3qv7k" path="res://assets/Audio/Music/In-Game Music.ogg" id="2_qu8ku"]
 [ext_resource type="PackedScene" uid="uid://dxjj7yinokw1d" path="res://scenes/collectibles/acorn/acorn.tscn" id="3_306wh"]
 [ext_resource type="PackedScene" uid="uid://cx18xdgcpqntc" path="res://scenes/collectibles/acorn_amount_hud.tscn" id="4_27uf0"]
 [ext_resource type="PackedScene" uid="uid://dqv2wabnsugds" path="res://scenes/enemy/enemy.tscn" id="5_3taq0"]
 [ext_resource type="TileSet" uid="uid://cljel4i11f2gs" path="res://scenes/tileset.tres" id="6_7uebv"]
 [ext_resource type="Script" path="res://scenes/hp.gd" id="6_8km8m"]
 [ext_resource type="PackedScene" uid="uid://bw646208otp6p" path="res://UI/pause_menu.tscn" id="7_3724x"]
+[ext_resource type="Texture2D" uid="uid://blolmkhpy0xix" path="res://assets/visual/Artwork/Temp.png" id="11_kn3jw"]
+[ext_resource type="Texture2D" uid="uid://vxl5p1smyhli" path="res://assets/visual/Artwork/One Platform.png" id="12_mvvp8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s12wl"]
 size = Vector2(1149, 35)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_itj16"]
+size = Vector2(353.178, 86.8726)
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_wywkf")
@@ -34,7 +40,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="Squireely player" parent="." instance=ExtResource("1_r5wig")]
-position = Vector2(499, -154)
+position = Vector2(479, 365)
 
 [node name="walls" type="Node2D" parent="."]
 position = Vector2(4827, 40)
@@ -333,7 +339,7 @@ tile_map_data = PackedByteArray("AAABAAoAAAAAAAAAAAACAAoAAAAAAAAAAAADAAoAAAAAAAA
 tile_set = ExtResource("6_7uebv")
 
 [node name="Acorn" parent="." instance=ExtResource("3_306wh")]
-position = Vector2(630, 318)
+position = Vector2(479, 195)
 
 [node name="Acorn2" parent="." instance=ExtResource("3_306wh")]
 position = Vector2(825, -492)
@@ -366,7 +372,7 @@ position = Vector2(797, 587)
 position = Vector2(122, 280)
 
 [node name="Enemy10" parent="." instance=ExtResource("5_3taq0")]
-position = Vector2(777, 116)
+position = Vector2(577, -228)
 
 [node name="Enemy11" parent="." instance=ExtResource("5_3taq0")]
 position = Vector2(120, -207)
@@ -411,7 +417,7 @@ position = Vector2(343, 31)
 position = Vector2(999, -244)
 
 [node name="Acorn6" parent="." instance=ExtResource("3_306wh")]
-position = Vector2(955, 317)
+position = Vector2(781, 228)
 
 [node name="Acorn7" parent="." instance=ExtResource("3_306wh")]
 position = Vector2(725, -124)
@@ -433,3 +439,44 @@ position = Vector2(823, -1526)
 
 [node name="Acorn13" parent="." instance=ExtResource("3_306wh")]
 position = Vector2(377, -1856)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(586, -909)
+stream = ExtResource("2_qu8ku")
+volume_db = -15.0
+autoplay = true
+max_distance = 50000.0
+panning_strength = 0.0
+bus = &"Main Menu Bus"
+
+[node name="Temp" type="Sprite2D" parent="."]
+visible = false
+show_behind_parent = true
+position = Vector2(577, -952)
+scale = Vector2(1, 0.548333)
+texture = ExtResource("11_kn3jw")
+
+[node name="OnePlatform" type="Sprite2D" parent="."]
+position = Vector2(769, 314)
+scale = Vector2(0.689453, 0.689453)
+texture = ExtResource("12_mvvp8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OnePlatform"]
+position = Vector2(-7.25195, -23.1303)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_itj16")
+
+[node name="OnePlatform2" type="Sprite2D" parent="."]
+position = Vector2(301, 128)
+scale = Vector2(0.715668, 0.715668)
+texture = ExtResource("12_mvvp8")
+
+[node name="OnePlatform3" type="Sprite2D" parent="."]
+position = Vector2(892.25, -69.25)
+scale = Vector2(0.663086, 0.663086)
+texture = ExtResource("12_mvvp8")
+
+[node name="OnePlatform4" type="Sprite2D" parent="."]
+position = Vector2(553, -339)
+scale = Vector2(0.679688, 0.679688)
+texture = ExtResource("12_mvvp8")
