@@ -12,12 +12,10 @@
 [ext_resource type="PackedScene" uid="uid://bw646208otp6p" path="res://UI/pause_menu.tscn" id="7_3724x"]
 [ext_resource type="Texture2D" uid="uid://blolmkhpy0xix" path="res://assets/visual/Artwork/Temp.png" id="11_kn3jw"]
 [ext_resource type="Texture2D" uid="uid://vxl5p1smyhli" path="res://assets/visual/Artwork/One Platform.png" id="12_mvvp8"]
+[ext_resource type="PackedScene" uid="uid://dn31bqxsmgrbj" path="res://platform.tscn" id="13_tcemc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s12wl"]
 size = Vector2(1149, 35)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_itj16"]
-size = Vector2(353.178, 86.8726)
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_wywkf")
@@ -462,17 +460,6 @@ position = Vector2(572.076, -965.5)
 scale = Vector2(1.00755, 0.5415)
 texture = ExtResource("11_kn3jw")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visibility_layer = 3
-position = Vector2(764, 298.053)
-scale = Vector2(0.689453, 0.689453)
-shape = SubResource("RectangleShape2D_itj16")
-
-[node name="OnePlatform" type="Sprite2D" parent="."]
-position = Vector2(769, 314)
-scale = Vector2(0.689453, 0.689453)
-texture = ExtResource("12_mvvp8")
-
 [node name="OnePlatform2" type="Sprite2D" parent="."]
 position = Vector2(301, 128)
 scale = Vector2(0.715668, 0.715668)
@@ -487,3 +474,15 @@ texture = ExtResource("12_mvvp8")
 position = Vector2(553, -339)
 scale = Vector2(0.679688, 0.679688)
 texture = ExtResource("12_mvvp8")
+
+[node name="Platform" parent="." instance=ExtResource("13_tcemc")]
+position = Vector2(852, 354)
+
+[node name="Platform2" parent="." instance=ExtResource("13_tcemc")]
+position = Vector2(326, 128)
+
+[node name="Platform3" parent="." instance=ExtResource("13_tcemc")]
+position = Vector2(957, -59)
+
+[node name="Platform4" parent="." instance=ExtResource("13_tcemc")]
+position = Vector2(618, -328)
