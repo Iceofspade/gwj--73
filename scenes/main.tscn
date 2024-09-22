@@ -456,15 +456,22 @@ position = Vector2(577, -952)
 scale = Vector2(1, 0.548333)
 texture = ExtResource("11_kn3jw")
 
+[node name="Temp2" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(572.076, -965.5)
+scale = Vector2(1.00755, 0.5415)
+texture = ExtResource("11_kn3jw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visibility_layer = 3
+position = Vector2(764, 298.053)
+scale = Vector2(0.689453, 0.689453)
+shape = SubResource("RectangleShape2D_itj16")
+
 [node name="OnePlatform" type="Sprite2D" parent="."]
 position = Vector2(769, 314)
 scale = Vector2(0.689453, 0.689453)
 texture = ExtResource("12_mvvp8")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="OnePlatform"]
-position = Vector2(-7.25195, -23.1303)
-scale = Vector2(1, 1)
-shape = SubResource("RectangleShape2D_itj16")
 
 [node name="OnePlatform2" type="Sprite2D" parent="."]
 position = Vector2(301, 128)
