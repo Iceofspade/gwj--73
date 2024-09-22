@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cvmaax8x52yym"
+path="res://.godot/imported/SFX - ChargeShot.wav-525d66727f42831c4f68300a1b94490e.sample"
+
+[deps]
+
+source_file="res://assets/Audio/SFX/SFX - ChargeShot.wav"
+dest_files=["res://.godot/imported/SFX - ChargeShot.wav-525d66727f42831c4f68300a1b94490e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
