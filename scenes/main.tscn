@@ -304,8 +304,8 @@ offset_right = 1148.0
 offset_bottom = 47.0
 
 [node name="follow cam" type="Camera2D" parent="." node_paths=PackedStringArray("player")]
-position = Vector2(606, 587)
-zoom = Vector2(1.08, 0.9)
+position = Vector2(575.155, 481.26)
+zoom = Vector2(1.159, 0.966)
 script = ExtResource("2_isc7h")
 player = NodePath("../Squireely player")
 
@@ -340,10 +340,10 @@ tile_set = ExtResource("6_7uebv")
 position = Vector2(479, 195)
 
 [node name="Acorn2" parent="." instance=ExtResource("3_306wh")]
-position = Vector2(825, -492)
+position = Vector2(655, -447)
 
 [node name="Enemy" parent="." instance=ExtResource("5_3taq0")]
-position = Vector2(133, 588)
+position = Vector2(113, 590)
 
 [node name="Enemy2" parent="." instance=ExtResource("5_3taq0")]
 position = Vector2(211, 588)
@@ -364,31 +364,61 @@ position = Vector2(618, 587)
 position = Vector2(711, 587)
 
 [node name="Enemy8" parent="." instance=ExtResource("5_3taq0")]
-position = Vector2(797, 587)
+position = Vector2(812, 587)
 
 [node name="Enemy9" parent="." instance=ExtResource("5_3taq0")]
-position = Vector2(122, 280)
+position = Vector2(326, 332)
+
+[node name="Enemy30" parent="." instance=ExtResource("5_3taq0")]
+position = Vector2(669, -1877)
+
+[node name="Enemy29" parent="." instance=ExtResource("5_3taq0")]
+position = Vector2(125, -1424)
+
+[node name="Enemy28" parent="." instance=ExtResource("5_3taq0")]
+position = Vector2(387, -1724)
+
+[node name="Enemy27" parent="." instance=ExtResource("5_3taq0")]
+position = Vector2(843, -2258)
+
+[node name="Enemy26" parent="." instance=ExtResource("5_3taq0")]
+position = Vector2(130, -1856)
+
+[node name="Enemy25" parent="." instance=ExtResource("5_3taq0")]
+position = Vector2(325, -2372)
+
+[node name="Enemy23" parent="." instance=ExtResource("5_3taq0")]
+position = Vector2(849, -1712)
+
+[node name="Enemy23" parent="Enemy23" instance=ExtResource("5_3taq0")]
+position = Vector2(-437, 286)
+
+[node name="Enemy24" parent="." instance=ExtResource("5_3taq0")]
+position = Vector2(1005, -1485)
+
+[node name="Enemy22" parent="." instance=ExtResource("5_3taq0")]
+position = Vector2(649, 192)
 
 [node name="Enemy10" parent="." instance=ExtResource("5_3taq0")]
-position = Vector2(577, -228)
+position = Vector2(492, -98)
 
 [node name="Enemy11" parent="." instance=ExtResource("5_3taq0")]
-position = Vector2(120, -207)
+position = Vector2(119, -70)
 
 [node name="Enemy12" parent="." instance=ExtResource("5_3taq0")]
-position = Vector2(1092, -68)
+position = Vector2(1001, 64)
 
 [node name="Enemy13" parent="." instance=ExtResource("5_3taq0")]
-position = Vector2(368, -470)
+position = Vector2(371, -346)
 
 [node name="Enemy14" parent="." instance=ExtResource("5_3taq0")]
-position = Vector2(677, -752)
+position = Vector2(482, -673)
 
 [node name="Enemy15" parent="." instance=ExtResource("5_3taq0")]
-position = Vector2(298, -975)
+position = Vector2(397, -1027)
 
 [node name="Enemy16" parent="." instance=ExtResource("5_3taq0")]
-position = Vector2(665, -1201)
+position = Vector2(739, -1265)
 
 [node name="Enemy17" parent="." instance=ExtResource("5_3taq0")]
 position = Vector2(914, 586)
@@ -397,43 +427,97 @@ position = Vector2(914, 586)
 position = Vector2(1022, 588)
 
 [node name="Enemy19" parent="." instance=ExtResource("5_3taq0")]
-position = Vector2(819, -239)
+position = Vector2(779, -465)
 
 [node name="Enemy20" parent="." instance=ExtResource("5_3taq0")]
-position = Vector2(868, -999)
+position = Vector2(671, -899)
 
 [node name="Enemy21" parent="." instance=ExtResource("5_3taq0")]
-position = Vector2(312, -1406)
+position = Vector2(129, -1106)
 
 [node name="Acorn3" parent="." instance=ExtResource("3_306wh")]
-position = Vector2(298, -701)
+position = Vector2(946, -445)
 
 [node name="Acorn4" parent="." instance=ExtResource("3_306wh")]
-position = Vector2(343, 31)
+position = Vector2(249, -175)
 
 [node name="Acorn5" parent="." instance=ExtResource("3_306wh")]
-position = Vector2(999, -244)
+position = Vector2(335, -41)
 
 [node name="Acorn6" parent="." instance=ExtResource("3_306wh")]
-position = Vector2(781, 228)
+position = Vector2(875, -446)
 
 [node name="Acorn7" parent="." instance=ExtResource("3_306wh")]
-position = Vector2(725, -124)
+position = Vector2(795, 86)
+
+[node name="Acorn16" parent="." instance=ExtResource("3_306wh")]
+position = Vector2(566, -798)
+
+[node name="Acorn17" parent="." instance=ExtResource("3_306wh")]
+position = Vector2(899, 87)
+
+[node name="Acorn15" parent="." instance=ExtResource("3_306wh")]
+position = Vector2(790, -189)
+
+[node name="Acorn31" parent="." instance=ExtResource("3_306wh")]
+position = Vector2(1188, -2729)
+
+[node name="Acorn30" parent="." instance=ExtResource("3_306wh")]
+position = Vector2(1019, -2737)
+
+[node name="Acorn29" parent="." instance=ExtResource("3_306wh")]
+position = Vector2(857, -2723)
+
+[node name="Acorn28" parent="." instance=ExtResource("3_306wh")]
+position = Vector2(681, -2695)
+
+[node name="Acorn27" parent="." instance=ExtResource("3_306wh")]
+position = Vector2(448, -2724)
+
+[node name="Acorn26" parent="." instance=ExtResource("3_306wh")]
+position = Vector2(172, -2789)
+
+[node name="Acorn25" parent="." instance=ExtResource("3_306wh")]
+position = Vector2(383, -2109)
+
+[node name="Acorn24" parent="." instance=ExtResource("3_306wh")]
+position = Vector2(527, -1711)
+
+[node name="Acorn23" parent="." instance=ExtResource("3_306wh")]
+position = Vector2(667, -1712)
+
+[node name="Acorn22" parent="." instance=ExtResource("3_306wh")]
+position = Vector2(397, -924)
+
+[node name="Acorn21" parent="." instance=ExtResource("3_306wh")]
+position = Vector2(134, -924)
+
+[node name="Acorn14" parent="." instance=ExtResource("3_306wh")]
+position = Vector2(918, -656)
 
 [node name="Acorn8" parent="." instance=ExtResource("3_306wh")]
-position = Vector2(157, -445)
+position = Vector2(1026, -447)
 
 [node name="Acorn9" parent="." instance=ExtResource("3_306wh")]
-position = Vector2(573, -1004)
+position = Vector2(566, -1128)
 
 [node name="Acorn10" parent="." instance=ExtResource("3_306wh")]
 position = Vector2(254, -1216)
 
 [node name="Acorn11" parent="." instance=ExtResource("3_306wh")]
-position = Vector2(947, -797)
+position = Vector2(488, -448)
+
+[node name="Acorn18" parent="." instance=ExtResource("3_306wh")]
+position = Vector2(851, -1256)
+
+[node name="Acorn20" parent="." instance=ExtResource("3_306wh")]
+position = Vector2(262, -924)
+
+[node name="Acorn19" parent="." instance=ExtResource("3_306wh")]
+position = Vector2(961, -1258)
 
 [node name="Acorn12" parent="." instance=ExtResource("3_306wh")]
-position = Vector2(823, -1526)
+position = Vector2(850, -1492)
 
 [node name="Acorn13" parent="." instance=ExtResource("3_306wh")]
 position = Vector2(377, -1856)
@@ -454,35 +538,72 @@ position = Vector2(577, -952)
 scale = Vector2(1, 0.548333)
 texture = ExtResource("11_kn3jw")
 
-[node name="Temp2" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="."]
+visible = false
 show_behind_parent = true
 position = Vector2(572.076, -965.5)
 scale = Vector2(1.00755, 0.5415)
 texture = ExtResource("11_kn3jw")
 
 [node name="OnePlatform2" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(301, 128)
 scale = Vector2(0.715668, 0.715668)
 texture = ExtResource("12_mvvp8")
 
 [node name="OnePlatform3" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(892.25, -69.25)
 scale = Vector2(0.663086, 0.663086)
 texture = ExtResource("12_mvvp8")
 
 [node name="OnePlatform4" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(553, -339)
 scale = Vector2(0.679688, 0.679688)
 texture = ExtResource("12_mvvp8")
 
+[node name="Platform3" parent="." instance=ExtResource("13_tcemc")]
+position = Vector2(489, 454)
+
 [node name="Platform" parent="." instance=ExtResource("13_tcemc")]
-position = Vector2(852, 354)
+position = Vector2(909, 198)
 
 [node name="Platform2" parent="." instance=ExtResource("13_tcemc")]
-position = Vector2(326, 128)
+position = Vector2(257, 70)
 
-[node name="Platform3" parent="." instance=ExtResource("13_tcemc")]
-position = Vector2(957, -59)
+[node name="Platform6" parent="." instance=ExtResource("13_tcemc")]
+position = Vector2(913, -328)
 
 [node name="Platform4" parent="." instance=ExtResource("13_tcemc")]
 position = Vector2(618, -328)
+
+[node name="Platform8" parent="." instance=ExtResource("13_tcemc")]
+position = Vector2(896, -1137)
+
+[node name="Platform7" parent="." instance=ExtResource("13_tcemc")]
+position = Vector2(266, -810)
+
+[node name="Platform15" parent="." instance=ExtResource("13_tcemc")]
+position = Vector2(263, -1593)
+
+[node name="Platform14" parent="." instance=ExtResource("13_tcemc")]
+position = Vector2(3498, -3058)
+
+[node name="Platform13" parent="." instance=ExtResource("13_tcemc")]
+position = Vector2(531, -1594)
+
+[node name="Platform12" parent="." instance=ExtResource("13_tcemc")]
+position = Vector2(2841, -3049)
+
+[node name="Platform11" parent="." instance=ExtResource("13_tcemc")]
+position = Vector2(2374, -2740)
+
+[node name="Platform10" parent="." instance=ExtResource("13_tcemc")]
+position = Vector2(2083, -3067)
+
+[node name="Platform9" parent="." instance=ExtResource("13_tcemc")]
+position = Vector2(1701, -3054)
+
+[node name="Platform5" parent="." instance=ExtResource("13_tcemc")]
+position = Vector2(574, -2218)
