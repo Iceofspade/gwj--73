@@ -6,12 +6,12 @@
 [ext_resource type="AudioStream" uid="uid://ds61kldx3qv7k" path="res://assets/Audio/Music/In-Game Music.ogg" id="2_qu8ku"]
 [ext_resource type="PackedScene" uid="uid://dxjj7yinokw1d" path="res://scenes/collectibles/acorn/acorn.tscn" id="3_306wh"]
 [ext_resource type="PackedScene" uid="uid://cx18xdgcpqntc" path="res://scenes/collectibles/acorn_amount_hud.tscn" id="4_27uf0"]
+[ext_resource type="Texture2D" uid="uid://3ahjd4o3p2ga" path="res://assets/visual/Artwork/Punk Munk_ Acorn Heist/Art Assets/Chipmunk/270 Action.png" id="4_ctn15"]
 [ext_resource type="PackedScene" uid="uid://dqv2wabnsugds" path="res://scenes/enemy/enemy.tscn" id="5_3taq0"]
 [ext_resource type="TileSet" uid="uid://cljel4i11f2gs" path="res://scenes/tileset.tres" id="6_7uebv"]
 [ext_resource type="Script" path="res://scenes/hp.gd" id="6_8km8m"]
 [ext_resource type="PackedScene" uid="uid://bw646208otp6p" path="res://UI/pause_menu.tscn" id="7_3724x"]
 [ext_resource type="Texture2D" uid="uid://blolmkhpy0xix" path="res://assets/visual/Artwork/Temp.png" id="11_kn3jw"]
-[ext_resource type="Texture2D" uid="uid://vxl5p1smyhli" path="res://assets/visual/Artwork/One Platform.png" id="12_mvvp8"]
 [ext_resource type="PackedScene" uid="uid://dn31bqxsmgrbj" path="res://platform.tscn" id="13_tcemc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s12wl"]
@@ -36,9 +36,6 @@ offset_bottom = -318.0
 scale = Vector2(3.88626, 2.05946)
 size_flags_horizontal = 4
 size_flags_vertical = 4
-
-[node name="Squireely player" parent="." instance=ExtResource("1_r5wig")]
-position = Vector2(479, 365)
 
 [node name="walls" type="Node2D" parent="."]
 position = Vector2(4827, 40)
@@ -303,6 +300,13 @@ offset_top = 7.0
 offset_right = 1148.0
 offset_bottom = 47.0
 
+[node name="Squireely player" parent="." instance=ExtResource("1_r5wig")]
+position = Vector2(479, 365)
+
+[node name="Sprite2D" type="Sprite2D" parent="Squireely player"]
+scale = Vector2(0.298286, 0.0800024)
+texture = ExtResource("4_ctn15")
+
 [node name="follow cam" type="Camera2D" parent="." node_paths=PackedStringArray("player")]
 position = Vector2(606, 587)
 zoom = Vector2(1.08, 0.9)
@@ -459,21 +463,6 @@ show_behind_parent = true
 position = Vector2(572.076, -965.5)
 scale = Vector2(1.00755, 0.5415)
 texture = ExtResource("11_kn3jw")
-
-[node name="OnePlatform2" type="Sprite2D" parent="."]
-position = Vector2(301, 128)
-scale = Vector2(0.715668, 0.715668)
-texture = ExtResource("12_mvvp8")
-
-[node name="OnePlatform3" type="Sprite2D" parent="."]
-position = Vector2(892.25, -69.25)
-scale = Vector2(0.663086, 0.663086)
-texture = ExtResource("12_mvvp8")
-
-[node name="OnePlatform4" type="Sprite2D" parent="."]
-position = Vector2(553, -339)
-scale = Vector2(0.679688, 0.679688)
-texture = ExtResource("12_mvvp8")
 
 [node name="Platform" parent="." instance=ExtResource("13_tcemc")]
 position = Vector2(852, 354)
