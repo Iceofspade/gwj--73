@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://dlsle2vdui60s"]
+[gd_scene load_steps=15 format=4 uid="uid://dlsle2vdui60s"]
 
 [ext_resource type="PackedScene" uid="uid://b55kme0hh5rkf" path="res://scenes/player/squireely_player.tscn" id="1_r5wig"]
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_wywkf"]
@@ -13,8 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://blolmkhpy0xix" path="res://assets/visual/Artwork/Temp.png" id="11_kn3jw"]
 [ext_resource type="Texture2D" uid="uid://vxl5p1smyhli" path="res://assets/visual/Artwork/One Platform.png" id="12_mvvp8"]
 [ext_resource type="PackedScene" uid="uid://dn31bqxsmgrbj" path="res://platform.tscn" id="13_tcemc"]
-[ext_resource type="FontFile" uid="uid://c4ceb1ibsen43" path="res://assets/fonts/Funkrocker.otf" id="14_p03t3"]
-[ext_resource type="Texture2D" uid="uid://bnqt4dj7q6qnq" path="res://assets/visual/Artwork/Punk Munk_ Acorn Heist/Art Assets/Pile of acorns.png" id="15_dc4jp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s12wl"]
 size = Vector2(1149, 35)
@@ -611,18 +609,3 @@ position = Vector2(1701, -3054)
 
 [node name="Platform5" parent="." instance=ExtResource("13_tcemc")]
 position = Vector2(574, -2218)
-
-[node name="Goal" type="Label" parent="."]
-offset_left = 427.0
-offset_top = -2550.0
-offset_right = 686.0
-offset_bottom = -2438.0
-theme_override_fonts/font = ExtResource("14_p03t3")
-theme_override_font_sizes/font_size = 50
-text = "GOAL"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="PileOfAcorns" type="Sprite2D" parent="."]
-position = Vector2(589, -2394)
-texture = ExtResource("15_dc4jp")
