@@ -3,9 +3,14 @@
 [ext_resource type="Script" path="res://main_menu.gd" id="1_ugb5m"]
 [ext_resource type="FontFile" uid="uid://cc0a4p6qxu2mk" path="res://assets/fonts/If.ttf" id="2_3m51i"]
 [ext_resource type="FontFile" uid="uid://b57ym66rlibo8" path="res://assets/fonts/Copyduck.ttf" id="2_27plf"]
+<<<<<<< HEAD
 [ext_resource type="FontFile" uid="uid://c4ceb1ibsen43" path="res://assets/fonts/Funkrocker.otf" id="3_7bycs"]
 [ext_resource type="AudioStream" uid="uid://bors86jr8gj2l" path="res://assets/Audio/Music/Music-MainMenu(GoingNuts).ogg" id="4_uvkxm"]
 [ext_resource type="Texture2D" uid="uid://ctfu6sgfntd2d" path="res://assets/visual/Artwork/MainMenu.png" id="5_srim2"]
+=======
+[ext_resource type="FontFile" uid="uid://dgkb3j01keed0" path="res://assets/fonts/Coffee Soda.ttf" id="3_6r4au"]
+[ext_resource type="AudioStream" uid="uid://bors86jr8gj2l" path="res://assets/Audio/Music/Music-MainMenu(GoingNuts).ogg" id="4_uvkxm"]
+>>>>>>> Health&ChangesPath
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fbt06"]
 
@@ -88,7 +93,6 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_jn5mx")
 text = "Start"
 
 [node name="Settings" type="Button" parent="VBoxContainer"]
-visible = false
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_disabled_color = Color(0.133196, 0.133196, 0.133196, 1)
