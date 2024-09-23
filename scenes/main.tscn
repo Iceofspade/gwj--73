@@ -1,18 +1,24 @@
-[gd_scene load_steps=15 format=4 uid="uid://dlsle2vdui60s"]
+[gd_scene load_steps=20 format=4 uid="uid://dlsle2vdui60s"]
 
 [ext_resource type="PackedScene" uid="uid://b55kme0hh5rkf" path="res://scenes/player/squireely_player.tscn" id="1_r5wig"]
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_wywkf"]
 [ext_resource type="Script" path="res://scenes/follow_cam.gd" id="2_isc7h"]
 [ext_resource type="AudioStream" uid="uid://ds61kldx3qv7k" path="res://assets/Audio/Music/In-Game Music.ogg" id="2_qu8ku"]
 [ext_resource type="PackedScene" uid="uid://dxjj7yinokw1d" path="res://scenes/collectibles/acorn/acorn.tscn" id="3_306wh"]
+[ext_resource type="Texture2D" uid="uid://d0t2udn8opo1o" path="res://assets/visual/Artwork/Punk Munk_ Acorn Heist/Art Assets/Chipmunk/270 Aim.png" id="4_2fmvo"]
 [ext_resource type="PackedScene" uid="uid://cx18xdgcpqntc" path="res://scenes/collectibles/acorn_amount_hud.tscn" id="4_27uf0"]
+[ext_resource type="Script" path="res://scenes/area_2d.gd" id="4_puhje"]
 [ext_resource type="PackedScene" uid="uid://dqv2wabnsugds" path="res://scenes/enemy/enemy.tscn" id="5_3taq0"]
+[ext_resource type="Texture2D" uid="uid://bs1x4fy3imkym" path="res://assets/visual/Artwork/Pile of acorns.png" id="5_d2u8i"]
 [ext_resource type="TileSet" uid="uid://cljel4i11f2gs" path="res://scenes/tileset.tres" id="6_7uebv"]
 [ext_resource type="Script" path="res://scenes/hp.gd" id="6_8km8m"]
 [ext_resource type="PackedScene" uid="uid://bw646208otp6p" path="res://UI/pause_menu.tscn" id="7_3724x"]
 [ext_resource type="Texture2D" uid="uid://blolmkhpy0xix" path="res://assets/visual/Artwork/Temp.png" id="11_kn3jw"]
 [ext_resource type="Texture2D" uid="uid://vxl5p1smyhli" path="res://assets/visual/Artwork/One Platform.png" id="12_mvvp8"]
 [ext_resource type="PackedScene" uid="uid://dn31bqxsmgrbj" path="res://platform.tscn" id="13_tcemc"]
+[ext_resource type="FontFile" uid="uid://c4ceb1ibsen43" path="res://assets/fonts/Funkrocker.otf" id="16_aag7t"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ooexc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s12wl"]
 size = Vector2(1149, 35)
@@ -37,8 +43,25 @@ scale = Vector2(3.88626, 2.05946)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
+[node name="PileOfAcorns" type="Sprite2D" parent="."]
+position = Vector2(599, -2392)
+texture = ExtResource("5_d2u8i")
+
+[node name="Area2D" type="Area2D" parent="PileOfAcorns"]
+position = Vector2(-21, -3)
+scale = Vector2(15.68, 12.24)
+script = ExtResource("4_puhje")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PileOfAcorns/Area2D"]
+scale = Vector2(1, 1)
+shape = SubResource("CircleShape2D_ooexc")
+
 [node name="Squireely player" parent="." instance=ExtResource("1_r5wig")]
 position = Vector2(479, 365)
+
+[node name="Sprite2D" type="Sprite2D" parent="Squireely player"]
+scale = Vector2(-0.219269, 0.106101)
+texture = ExtResource("4_2fmvo")
 
 [node name="walls" type="Node2D" parent="."]
 position = Vector2(4827, 40)
@@ -609,3 +632,16 @@ position = Vector2(1701, -3054)
 
 [node name="Platform5" parent="." instance=ExtResource("13_tcemc")]
 position = Vector2(574, -2218)
+
+[node name="Goal" type="Label" parent="."]
+offset_left = 302.0
+offset_top = -2546.0
+offset_right = 379.0
+offset_bottom = -2501.0
+scale = Vector2(7.16, 2.4)
+theme_override_fonts/font = ExtResource("16_aag7t")
+theme_override_font_sizes/font_size = 30
+text = "GOAL
+"
+horizontal_alignment = 1
+vertical_alignment = 1
